@@ -1,0 +1,127 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 347,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 348,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "A = np.random.randint(20,100,40)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 349,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[96, 79, 68, 41, 52],\n",
+       "       [43, 52, 82, 80, 63],\n",
+       "       [74, 58, 26, 31, 80],\n",
+       "       [61, 46, 86, 20, 25],\n",
+       "       [36, 36, 79, 22, 46],\n",
+       "       [87, 79, 98, 40, 91],\n",
+       "       [22, 31, 31, 86, 34],\n",
+       "       [56, 61, 36, 54, 21]])"
+      ]
+     },
+     "execution_count": 349,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "A.reshape(8,5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 350,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "調分\n",
+      "[ 98.71794872  87.82051282  80.76923077  63.46153846  70.51282051\n",
+      "  64.74358974  70.51282051  89.74358974  88.46153846  77.56410256\n",
+      "  84.61538462  74.35897436  53.84615385  57.05128205  88.46153846\n",
+      "  76.28205128  66.66666667  92.30769231  50.          53.20512821\n",
+      "  60.25641026  60.25641026  87.82051282  51.28205128  66.66666667\n",
+      "  92.94871795  87.82051282 100.          62.82051282  95.51282051\n",
+      "  51.28205128  57.05128205  57.05128205  92.30769231  58.97435897\n",
+      "  73.07692308  76.28205128  60.25641026  71.79487179  50.64102564]\n"
+     ]
+    }
+   ],
+   "source": [
+    "if (len(A[A < 60]) > 20):\n",
+    "    a = np.array([[max(A),1],\n",
+    "                  [min(A),1]])\n",
+    "    b = np.array([[100],\n",
+    "                  [50]])\n",
+    "    answer = np.linalg.solve(a, b)\n",
+    "    A = A * answer[0,0] + answer[1,0]\n",
+    "    \n",
+    "    print(\"調分\")\n",
+    "    print(A)\n",
+    "else:\n",
+    "    print(\"不調分\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}

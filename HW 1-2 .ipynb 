@@ -1,0 +1,219 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 72,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 79,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (<ipython-input-79-0d70e079141e>, line 45)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-79-0d70e079141e>\"\u001b[0;36m, line \u001b[0;32m45\u001b[0m\n\u001b[0;31m    elif(float(Dollar) != float)\u001b[0m\n\u001b[0m                                ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+     ]
+    }
+   ],
+   "source": [
+    "def trans(TypeFrom,TypeTo,Dollar):\n",
+    "    A = 0 \n",
+    "    if(TypeFrom == \"USD\"):\n",
+    "        A = 30.95\n",
+    "    elif(TypeFrom == \"HKD\"):\n",
+    "        A = 3.966\n",
+    "    elif(TypeFrom == \"AUD\"):\n",
+    "        A = 21.97\n",
+    "    elif(TypeFrom == \"CAD\"):\n",
+    "        A = 23.17\n",
+    "    elif(TypeFrom == \"SGD\"):\n",
+    "        A = 22.87\n",
+    "    elif(TypeFrom == \"CHF\"):\n",
+    "        A = 30.73\n",
+    "    elif(TypeFrom == \"JPY\"):\n",
+    "        A = 0.2795\n",
+    "    elif(TypeFrom == \"TWD\"):\n",
+    "        A = 1\n",
+    "    else:\n",
+    "        A = 0 \n",
+    "   \n",
+    "    B = 0  \n",
+    "    \n",
+    "    if(TypeTo == \"USD\"):\n",
+    "        B = 30.95\n",
+    "    elif(TypeTo == \"HKD\"):\n",
+    "        B = 3.966\n",
+    "    elif(TypeTo == \"AUD\"):\n",
+    "        B = 21.97\n",
+    "    elif(TypeTo == \"CAD\"):\n",
+    "        B = 23.17\n",
+    "    elif(TypeTo == \"SGD\"):\n",
+    "        B = 22.87\n",
+    "    elif(TypeTo == \"CHF\"):\n",
+    "        B = 30.73\n",
+    "    elif(TypeTo == \"JPY\"):\n",
+    "        B = 0.2795\n",
+    "    elif(TypeTo == \"TWD\"):\n",
+    "        A = 1\n",
+    "    else:\n",
+    "        B = 0 \n",
+    "        \n",
+    "    if(A == 0 or B == 0):\n",
+    "        print(\"無所輸入貨幣之資訊\")\n",
+    "    elif(float(Dollar) != float)\n",
+    "        \n",
+    "    else:\n",
+    "        print(f'換算結果為：{Dollar}元{TypeFrom}相當於{float(Dollar)*A/B}元{TypeTo}')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 74,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "                                       貨幣轉換器\n",
+      "\n",
+      "                                   請問開始換算？(Y/N)\n"
+     ]
+    }
+   ],
+   "source": [
+    "print('''\n",
+    "                                       貨幣轉換器\n",
+    "\n",
+    "                                   請問開始換算？(Y/N)''')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 76,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "command = input(\"(Y/N)\");"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 77,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "if(command == \"N\"):\n",
+    "    print(\"換算結束\")\n",
+    "\n",
+    "while(command != \"Y\" and command != \"N\"):\n",
+    "    print(\"請認真回答好嗎？  請問開始換算？(Y/N)\")\n",
+    "    command = input(\"(Y/N)\");\n",
+    "        "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 86,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "ValueError",
+     "evalue": "could not convert string to float: 'asd'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mValueError\u001b[0m                                Traceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-86-955275b59c60>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      6\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      7\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 8\u001b[0;31m     \u001b[0mtrans\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mTypeFrom\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0mTypeTo\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0mDollar\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      9\u001b[0m     \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"請問繼續換算？ (Y/N)\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     10\u001b[0m     \u001b[0mcommand\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Y/N\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;32m<ipython-input-73-5ce8c17db836>\u001b[0m in \u001b[0;36mtrans\u001b[0;34m(TypeFrom, TypeTo, Dollar)\u001b[0m\n\u001b[1;32m     44\u001b[0m         \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"無所輸入貨幣之資訊\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     45\u001b[0m     \u001b[0;32melse\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 46\u001b[0;31m         \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34mf'換算結果為：{Dollar}元{TypeFrom}相當於{float(Dollar)*A/B}元{TypeTo}'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;31mValueError\u001b[0m: could not convert string to float: 'asd'"
+     ]
+    }
+   ],
+   "source": [
+    "while(command == \"Y\"):\n",
+    "    TypeFrom = input(\"TypeFrom\");\n",
+    "    TypeTo = input(\"TypeTo\");\n",
+    "    Dollar = input(\"Dollar\");\n",
+    "    \n",
+    " \n",
+    "        \n",
+    "    trans(TypeFrom,TypeTo,Dollar)\n",
+    "    print(\"請問繼續換算？ (Y/N)\")\n",
+    "    command = input(\"Y/N\")\n",
+    "    \n",
+    "    while(command != \"Y\" and command != \"N\"):\n",
+    "        print(\"請認真回答好嗎？ 請問開始換算？(Y/N)\")\n",
+    "        command = input(\"(Y/N)\");\n",
+    "    \n",
+    "    if(command == \"N\"):\n",
+    "        print(\"換算結束\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
